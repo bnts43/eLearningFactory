@@ -10,6 +10,6 @@
 
     <StackPanel>
         <TextBlock Text="{Binding SubLessonTitle, ElementName=root, Mode=OneWay, FallbackValue='Aucun cours à afficher'}" />
-        <TextBlock Text="{Binding SubLessonContent, ElementName=root, Mode=OneWay, FallbackValue='Aucun contenu trouvé'}" />
+        <TextBlock Text="{Binding SubLessonContent, ElementName=root, Mode=OneWay, FallbackValue='Aucun contenu trouvé'}" Visibility="{Binding HasContent, ElementName=root, Mode=OneTime, FallbackValue=Visibility.Collapsed}" />
     </StackPanel>
 </UserControl>

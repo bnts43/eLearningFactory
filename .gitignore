@@ -1,0 +1,14 @@
+/sources/repos/eLearningFactory/.vs
+/sources/repos/eLearningFactory/ConsoleApp/bin
+/sources/repos/eLearningFactory/ConsoleApp/obj
+/sources/repos/eLearningFactory/CoreStandard/bin
+/sources/repos/eLearningFactory/CoreStandard/obj
+/sources/repos/eLearningFactory/MyMVVMToolkit/bin
+/sources/repos/eLearningFactory/MyMVVMToolkit/obj
+/sources/repos/eLearningFactory/StubDataManagerStandard/bin
+/sources/repos/eLearningFactory/StubDataManagerStandard/obj
+/sources/repos/eLearningFactory/UWP/eLearningFactoryUWP/bin
+/sources/repos/eLearningFactory/UWP/eLearningFactoryUWP/obj
+/sources/repos/eLearningFactory/MyMVVMToolkit/project.lock.json
+/sources/repos/eLearningFactory/MyMVVMToolkit/MyMVVMToolkit.nuget.props
+/sources/repos/eLearningFactory/MyMVVMToolkit/MyMVVMToolkit.nuget.targets

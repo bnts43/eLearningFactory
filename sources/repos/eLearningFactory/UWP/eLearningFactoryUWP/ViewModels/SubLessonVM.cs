@@ -4,12 +4,12 @@ using System.Collections.ObjectModel;
 
 namespace eLearningFactoryUWP.ViewModels
 {
-    class SousCoursVM : BaseViewModel<SousCours>
+    class SubLessonVM : LessonVM
     {
-        public SousCoursVM(SousCours sc)
+        public SubLessonVM(Cours l)
+            : base(l)
         {
-            Model = sc;
-            SubLessonsVM = FactoryMToVM.SubLessons(Model.ListeSousCoursROC);
+            SubLessonsVM = FactoryMToVM.SubLessons(((SousCours)Model).ListeSousCoursROC);
         }
 
         private ObservableCollection<LessonVM> subLessonsVM = new ObservableCollection<LessonVM>();

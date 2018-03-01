@@ -29,7 +29,7 @@ namespace eLearningFactoryUWP.ViewModels
             { get ; set; }
 
         public LessonVM MatiereCourante
-            { get; private set; }
+            { get; set; }
 
 
         public FacadeVM(IDataManager dataManager)
@@ -60,15 +60,15 @@ namespace eLearningFactoryUWP.ViewModels
 
         public LessonVM SelectedLesson
         {
-            get
+            get;/*
             {
                 // SelectedIndex is always -1 due to setproperty not working properly (not even called)
-                return (SelectedIndex != -1) ? LessonsListVM[SelectedIndex] : null;
-            }
-            set
+                //return (SelectedIndex != -1) ? LessonsListVM[SelectedIndex] : null;
+            }*/
+            set;/*
             {
                 this.SelectedLesson = value;
-            }
+            }*/
         }
 
 

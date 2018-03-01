@@ -11,20 +11,21 @@
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
         <Grid.RowDefinitions>
             <RowDefinition Height="*"/>
-            <RowDefinition Height="8*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="7*"/>
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
         <local:TitreUserControl Grid.Row="0" />
+        <TextBlock Text="Qu'allez-vous apprendre aujourd'hui ?" Grid.Row="1" />
         <ListView ItemsSource="{x:Bind FVM.LessonsListVM, Mode=OneWay}"
-                  SelectedIndex="{x:Bind FVM.SelectedIndex, Mode=TwoWay}"
-                  Grid.Row="1" ItemClick="LessonDetail" SelectionMode="Single" IsItemClickEnabled="True">
+                  Grid.Row="2" ItemClick="LessonDetail" SelectionMode="Single" IsItemClickEnabled="True">
             <ListView.ItemTemplate>
                 <DataTemplate x:DataType="vm:LessonVM">
                     <local:ItemCoursListe LessonTitle="{x:Bind Titre}" />
                 </DataTemplate>
             </ListView.ItemTemplate>
         </ListView>
-        <local:ActionBar Grid.Row="2" /> 
+        <local:ActionBar Grid.Row="3" /> 
 
     </Grid>
 </Page>

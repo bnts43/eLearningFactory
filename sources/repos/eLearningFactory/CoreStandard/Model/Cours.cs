@@ -29,9 +29,9 @@ namespace Core.Model
         }
 
         /// <summary>
-        /// checks if the "right" object is equal to this Nounours or not
+        /// checks if the "right" object is equal to this Cours or not
         /// </summary>
-        /// <param name="right">the other object to be compared with this Nounours</param>
+        /// <param name="right">the other object to be compared with this Cours</param>
         /// <returns>true if equals, false if not</returns>
         public override bool Equals(object right)
         {
@@ -55,9 +55,9 @@ namespace Core.Model
         }
 
         /// <summary>
-        /// checks if this Nounours is equal to the other Nounours
+        /// checks if this Cours is equal to the other Cours
         /// </summary>
-        /// <param name="other">the other Nounours to be compared with</param>
+        /// <param name="other">the other Cours to be compared with</param>
         /// <returns>true if equals</returns>
         public bool Equals(Cours other)
         {

@@ -17,17 +17,22 @@
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
         <local:TitreUserControl Grid.Row="0" />
-        <TextBlock Text="{x:Bind FVM.SelectedLesson.Titre}" Grid.Row="1" />
-        <ListView Name="SubLessonsView"  ItemsSource="{x:Bind FVM.SelectedLesson.LessonsPlanVM}" Grid.Row="2" Visibility="{x:Bind FVM.SelectedLesson.HasChildToDisplay, Mode=OneTime}" >
+        <TextBlock Text="{x:Bind FVM.SelectedLesson.Titre, Mode=OneWay}" Grid.Row="1" />
+        <ListView Name="SubLessonsView" 
+                  ItemsSource="{x:Bind FVM.SelectedLesson.LessonsPlanVM, Mode=OneWay}" 
+                  Grid.Row="2" 
+                  Visibility="{x:Bind FVM.SelectedLesson.HasChildToDisplay, Mode=OneWay}" 
+                  ItemClick="LessonDetail" SelectionMode="Single" IsItemClickEnabled="True">
             <ListView.ItemTemplate>
                 <DataTemplate x:DataType="vm:LessonVM">
-                    <local:ItemSubLessonDetail SubLessonTitle="{x:Bind SubLessonTitle}" 
-                                            SubLessonContent="{x:Bind SubLessonContent}"/>
+                    <local:ItemSubLessonDetail SubLessonTitle="{x:Bind SubLessonTitle, Mode=OneWay}" 
+                                            SubLessonContent="{x:Bind SubLessonContent, Mode=OneWay}" HasContent="{x:Bind HasContent, Mode=OneWay}" />
                 </DataTemplate>
             </ListView.ItemTemplate>
 
         </ListView>
-        <!-- // Content n'affiche pas correctement <TextBlock Text="{x:Bind FVM.SelectedLesson.Content}" Grid.Row="3"/> //-->
+        <TextBlock IsTextScaleFactorEnabled="True" IsTextSelectionEnabled="True" TextWrapping="Wrap" Text="{x:Bind FVM.SelectedLesson.SubLessonContent}" Grid.Row="2"
+                   Visibility="{x:Bind FVM.SelectedLesson.HasContent}"/>
         <local:ActionBar Grid.Row="3" />
 
     </Grid>

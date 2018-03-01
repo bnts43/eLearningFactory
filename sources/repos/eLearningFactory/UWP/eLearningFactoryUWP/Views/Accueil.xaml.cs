@@ -25,6 +25,9 @@ namespace eLearningFactoryUWP
 
         private void LessonDetail(object sender, ItemClickEventArgs e)
         {
+            FVM.SelectedLesson = (LessonVM)e.ClickedItem;
+            
+            FVM.SelectedIndex = FVM.LessonsListVM.IndexOf(FVM.SelectedLesson);
             GoToPage(e, typeof(Lesson));
         }
 

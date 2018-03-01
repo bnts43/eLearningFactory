@@ -33,5 +33,16 @@ namespace eLearningFactoryUWP
                                 typeof(string),
                                 typeof(ItemSubLessonDetail),
                                 new PropertyMetadata("Cours non créé"));
+
+        public Visibility HasContent
+        {
+            get { return (Visibility)GetValue(HasContentProperty); }
+            set { SetValue(HasContentProperty, value); }
+        }
+        public static readonly DependencyProperty HasContentProperty =
+            DependencyProperty.Register("HasContent",
+                typeof(Visibility),
+                typeof(ItemSubLessonDetail),
+                new PropertyMetadata(Visibility.Collapsed));
     }
 }
